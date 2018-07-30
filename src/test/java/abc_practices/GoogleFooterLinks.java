@@ -1,13 +1,10 @@
 package abc_practices;
 
-
-
-
-//import static org.junit.Assert.assertEquals;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+//import static org.junit.Assert.assertEquals;
 
 public class GoogleFooterLinks {
 
@@ -23,7 +20,7 @@ public class GoogleFooterLinks {
 		Thread.sleep(2000);
 		
 		if(driver.getPageSource().contains("Privacy"))
-		System.out.println("The test passed");
+			System.out.println("The test passed");
 		else
 			System.out.println("The test failed");
 		
