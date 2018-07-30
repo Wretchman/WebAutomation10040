@@ -3,12 +3,10 @@ package abc_practices;
 
 
 
-import static org.junit.Assert.assertEquals;
-
+//import static org.junit.Assert.assertEquals;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import org.testng.Assert;
 
 public class GoogleFooterLinks {
@@ -29,10 +27,10 @@ public class GoogleFooterLinks {
 		else
 			System.out.println("The test failed");
 		
-		assert.assertEquals(true,driver.getPageSource().concat("Privacy"));
-		assert.assertEquals(0,2-2);
+		Assert.assertEquals(true,driver.getPageSource().contains("Privacy"));
+		Assert.assertEquals(0,2-2);
 
-		Thread.sleep(12000);
+		Thread.sleep(5000);
 		driver.close();
 		
 	
