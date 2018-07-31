@@ -1,8 +1,5 @@
 package abc_practices;
 
-
-
-
 import static org.junit.Assert.assertEquals;
 
 import org.openqa.selenium.By;
@@ -29,20 +26,43 @@ public class GoogleFooterLinks {
 		else
 			System.out.println("The test failed");
 		
-		assert.assertEquals(true,driver.getPageSource().concat("Privacy"));
-		assert.assertEquals(0,2-2);
-
-		Thread.sleep(12000);
+		Assert.assertEquals(true,driver.getPageSource().contains("Privacy"));
+		Assert.assertEquals(0,2-2);
+		driver.navigate().back();
+		
+		driver.findElement(By.linkText("Terms")).click();
+		if(driver.getPageSource().contains("Terms"))
+			System.out.println("The test passed");
+		else
+			System.out.println("The test failed");
+		Assert.assertEquals(true, driver.getPageSource().contains("Terms"));
+		Thread.sleep(2000);
+		driver.navigate().back();
+		
+		driver.findElement(By.linkText("Settings")).click();
+		if(driver.getPageSource().contains("Settings"))
+			System.out.println("The test passed");
+		else
+			System.out.println("The test failed");
+		Assert.assertEquals(true, driver.getPageSource().contains("Settings"));
+		Assert.assertEquals(3, 5-2);
+		
+		Thread.sleep(4000);
+		
 		driver.close();
+		
+		
 		
 	
 
 	
 	}
 
+	}
+
 
 
 	
-	}
+	
 
 
