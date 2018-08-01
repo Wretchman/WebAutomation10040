@@ -8,7 +8,7 @@ import org.testng.Assert;
 public class GoogleFooterLinks {
 
 	public static void main(String[] args) throws InterruptedException {
-		
+		// You must have to set the property.
 		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
         
         WebDriver driver = new ChromeDriver();  // You can use any other web browser.
