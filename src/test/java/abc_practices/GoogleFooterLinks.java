@@ -42,15 +42,9 @@ public class GoogleFooterLinks {
 			System.out.println("The test failed");
 		Assert.assertEquals(true, driver.getPageSource().contains("Settings"));
 		Thread.sleep(2000);
-		driver.close();
-		
-		
-		
-		
+		driver.quit();
 		
 			
-		
-		
 	}
 
 }
